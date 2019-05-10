@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Roly Reyes`,
-    description: `A weblog.`,
-    author: `@author`,
-    siteUrl: `https://lewis-gatsby-starter-blog.firebaseapp.com/`,
+    description: `Roly Reyes' weblog.`,
+    author: `Roly Reyes`,
+    siteUrl: `https://rolyreyes.com/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

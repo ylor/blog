@@ -21,8 +21,9 @@ const Hero = styled.div`
 `;
 
 const Deck = styled.div`
-  margin-top: 0;
+  font-size: 24px;
   text-align: center;
+  margin-top: -16px;
 `;
 
 const Post = styled.div`

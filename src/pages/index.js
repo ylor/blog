@@ -20,8 +20,9 @@ const Hero = styled.div`
 `;
 
 const Deck = styled.div`
+  font-size: 24px;
   text-align: center;
-  margin-top: 0;
+  margin-top: -16px;
 `;
 
 
