@@ -43,7 +43,6 @@ function Layout({ children }) {
           <GlobalStyles />
           <Wrapper>
             <Content>{children}</Content>
-            <Footer />
           </Wrapper>
         </>
       )}
