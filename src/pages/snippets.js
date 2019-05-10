@@ -9,8 +9,8 @@ import HeaderLogo from '../components/HeaderLogo';
 
 import HeadingPrimary from '../elements/HeadingPrimary';
 import HeadingSecondary from '../elements/HeadingSecondary';
-import TextBody from '../elements/TextBody';
-import TextDate from '../elements/TextDate';
+//import TextBody from '../elements/TextBody';
+//import TextDate from '../elements/TextDate';
 
 const Hero = styled.div`
   margin-bottom: 5vh;
@@ -38,6 +38,7 @@ function Blog({ data }) {
   return (
     <>
       <SEO title="Snippets" />
+      <HeaderBack />
       <HeaderLogo />
       <Layout>
         <Hero>

@@ -64,11 +64,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Lewis Gatsby Starter Blog`,
-        short_name: `Lewis Gatsby Starter Blog`,
+        name: `Roly Reyes' weblog`,
+        short_name: `Roly's blog`,
         start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#ffffff`,
+        background_color: `#111`,
+        theme_color: `#111`,
         display: `minimal-ui`,
         icon: `src/images/icon.png`,
       },
