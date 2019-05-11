@@ -5,6 +5,8 @@ import styled from 'styled-components';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import HeaderLogo from '../components/HeaderLogo';
+import NavBar from '../components/NavBar';
+
 
 import HeadingPrimary from '../elements/HeadingPrimary';
 import HeadingSecondary from '../elements/HeadingSecondary';
@@ -12,7 +14,7 @@ import TextBody from '../elements/TextBody';
 import TextDate from '../elements/TextDate';
 
 const Hero = styled.div`
-  margin-bottom: 10vh;
+  margin-bottom: 15vh;
 
   @media (max-width: 849px) {
     margin-bottom: 5vh;
@@ -39,7 +41,8 @@ function Blog({ data }) {
   return (
     <>
       <SEO title="weblog" />
-      <HeaderLogo />
+      <NavBar />
+
       <Layout>
         <Hero>
           <HeadingPrimary>Roly Reyes</HeadingPrimary>
@@ -72,7 +75,7 @@ export const query = graphql`
           id
           frontmatter {
             title
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "MMMM D, YYYY")
           }
           fields {
             slug

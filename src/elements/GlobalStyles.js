@@ -89,6 +89,7 @@ export default createGlobalStyle`
   }
 
   body {
+    //padding-top: 5vh;
     padding-top: 15vh;
     line-height: 1;
     --sides-padding-desktop: 3%;

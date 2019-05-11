@@ -1,13 +1,19 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import styled from 'styled-components';
 
+import SEO from '../components/SEO';
 import Layout from '../components/Layout';
 import HeaderBack from '../components/HeaderBack';
-import SEO from '../components/SEO';
+import NavBar from '../components/NavBar';
 
 import HeadingPrimary from '../elements/HeadingPrimary';
 import TextBody from '../elements/TextBody';
 import TextDate from '../elements/TextDate';
+
+const Spacer = styled.div`
+  padding-top: 10vh;
+`;
 
 export default ({ data }) => {
   const post = data.markdownRemark;
@@ -15,11 +21,13 @@ export default ({ data }) => {
   return (
     <>
       <SEO title={post.frontmatter.title} />
+      <Spacer />
       <HeaderBack />
       <Layout>
         <HeadingPrimary>{post.frontmatter.title}</HeadingPrimary>
         <TextDate>{post.frontmatter.date}</TextDate>
         <TextBody dangerouslySetInnerHTML={{ __html: post.html }} />
+      <NavBar />
       </Layout>
     </>
   );

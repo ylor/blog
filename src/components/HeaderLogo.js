@@ -23,9 +23,6 @@ function Header() {
       <Link to="/about">
         About
       </Link>
-      <Link to="/colophon">
-        Colophon
-      </Link>
       <a href="https://github.com/ylor" target="_blank">
         Github
       </a>

@@ -6,6 +6,7 @@ import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import HeaderBack from '../components/HeaderBack';
 import HeaderLogo from '../components/HeaderLogo';
+import NavBar from '../components/NavBar';
 
 import HeadingPrimary from '../elements/HeadingPrimary';
 import HeadingSecondary from '../elements/HeadingSecondary';
@@ -26,7 +27,7 @@ const Deck = styled.div`
   margin-top: -16px;
 `;
 
-const Post = styled.div`
+const Snip = styled.div`
   margin-bottom: 0px;
 
   @media (max-width: 849px) {
@@ -38,8 +39,6 @@ function Blog({ data }) {
   return (
     <>
       <SEO title="Snippets" />
-      <HeaderBack />
-      <HeaderLogo />
       <Layout>
         <Hero>
           <HeadingPrimary>Snippets</HeadingPrimary>
@@ -47,11 +46,12 @@ function Blog({ data }) {
         </Hero>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <Link to={node.fields.slug}>
-            <Post key={node.id}>
+            <Snip key={node.id}>
               <HeadingSecondary>{node.frontmatter.title}</HeadingSecondary>
-            </Post>
+            </Snip>
           </Link>
         ))}
+        <NavBar />
       </Layout>
     </>
   );
@@ -68,7 +68,7 @@ export const query = graphql`
           id
           frontmatter {
             title
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "MMMM D, YYYY")
           }
           fields {
             slug
