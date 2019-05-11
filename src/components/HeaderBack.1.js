@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { Location } from '@reach/router';
 import styled from 'styled-components';
 
 const FixedBar = styled.div`
@@ -28,22 +27,16 @@ const FixedBar = styled.div`
 `;
 
 function Header() {
+  if (window.location.href.indexOf('/snippet/') > -1) {
+    var backPath = '/snippets';
+  } else {
+    backPath = '/';
+  }
   return (
     <FixedBar>
-      <Location>
-        {({ location }) => {
-          if (location.pathname.indexOf('/snippet/') > -1) {
-            var backPath = '/snippets';
-          } else {
-            backPath = '/';
-          }
-          return (
-            <Link to={backPath}>
-              <p>&larr;</p>
-            </Link>
-          );
-        }}
-      </Location>
+      <Link to={backPath}>
+        <p>&larr;</p>
+      </Link>
     </FixedBar>
   );
 }
