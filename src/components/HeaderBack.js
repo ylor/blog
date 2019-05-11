@@ -29,7 +29,7 @@ right: auto;
 z-index: 999;
 height: 8vh;
 width: 100%;
-padding: 0 var(--sides-padding-desktop);
+padding-top: 0 var(--sides-padding-desktop);
 top: 0px;
 
 background-color: var(--background-color-translucent);

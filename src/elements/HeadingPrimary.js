@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export default styled.h1`
   display: block;
-  font-size: 60px;
+  font-size: 75px;
   letter-spacing: -3px;
   line-height: 1.1;
   margin: 0 auto 0 auto;
@@ -23,6 +23,6 @@ export default styled.h1`
   -webkit-text-fill-color: transparent;
 
   @media (max-width: 849px) {
-    font-size: 45px;
+    font-size: 50px;
   }
 `;

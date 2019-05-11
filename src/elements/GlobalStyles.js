@@ -90,7 +90,7 @@ export default createGlobalStyle`
 
   body {
     //padding-top: 5vh;
-    padding-top: 15vh;
+    padding-top: 10vh;
     line-height: 1;
     --sides-padding-desktop: 3%;
     --sides-padding-mobile: 5%;

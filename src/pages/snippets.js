@@ -27,6 +27,16 @@ const Deck = styled.div`
   margin-top: -16px;
 `;
 
+const Post = styled.div`
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 25px;
+
+  @media (max-width: 849px) {
+    padding-left: 0;
+  }
+`;
+
+
 const Snip = styled.div`
   margin-bottom: 0px;
 
@@ -41,6 +51,7 @@ function Blog({ data }) {
       <SEO title="Snippets" />
       <Layout>
         <Hero>
+          <HeaderBack />
           <HeadingPrimary>Snippets</HeadingPrimary>
           <Deck>bits of code</Deck>
         </Hero>
@@ -51,6 +62,7 @@ function Blog({ data }) {
             </Snip>
           </Link>
         ))}
+        <Post></Post>
         <NavBar />
       </Layout>
     </>
