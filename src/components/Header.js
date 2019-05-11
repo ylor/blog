@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import NavBar from '../components/NavBar';
+import NavBar from './NavBar';
 
-const FooterContainer = styled.footer`
+const HeaderContainer = styled.footer`
   position: relative;
   bottom: 0;
   margin-top: 5vh;
@@ -18,9 +18,9 @@ const FooterContainer = styled.footer`
 
 function Footer() {
   return (
-    <FooterContainer>
+    <HeaderContainer>
       <NavBar />
-    </FooterContainer>
+    </HeaderContainer>
   );
 }
 

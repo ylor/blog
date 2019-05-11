@@ -4,14 +4,14 @@ import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 
 //import HeaderLogo from '../components/HeaderLogo';
-//import Footer from '../components/Footer'
+import Footer from '../components/Footer';
 
 import GlobalStyles from '../elements/GlobalStyles';
 
 const Wrapper = styled.div`
-  padding: 0 var(--sides-padding-desktop);
   margin: 0 auto;
   max-width: 1400px;
+  padding: 0 var(--sides-padding-desktop);
 
   @media (max-width: 849px) {
     padding: 0 var(--sides-padding-mobile);
@@ -19,8 +19,8 @@ const Wrapper = styled.div`
 `;
 
 const Content = styled.main`
-  max-width: 900px;
   margin: 0 auto;
+  max-width: 900px;
 
   @media (max-width: 849px) {
     width: 100%;
@@ -44,6 +44,7 @@ function Layout({ children }) {
           <GlobalStyles />
           <Wrapper>
             <Content>{children}</Content>
+            <Footer />
           </Wrapper>
         </>
       )}

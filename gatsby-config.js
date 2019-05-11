@@ -55,7 +55,6 @@ module.exports = {
               maxWidth: 900,
               quality: 75,
               withWebp: true,
-              linkImagesToOriginal: false,
             },
           },
         ],
@@ -65,7 +64,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Roly Reyes' weblog`,
-        short_name: `Roly's blog`,
+        short_name: `Roly's weblog`,
         start_url: `/`,
         background_color: `#111`,
         theme_color: `#111`,

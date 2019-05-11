@@ -5,39 +5,22 @@ import styled from 'styled-components';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import HeaderBack from '../components/HeaderBack';
-import HeaderLogo from '../components/HeaderLogo';
-import NavBar from '../components/NavBar';
 
 import HeadingPrimary from '../elements/HeadingPrimary';
 import HeadingSecondary from '../elements/HeadingSecondary';
-//import TextBody from '../elements/TextBody';
-//import TextDate from '../elements/TextDate';
+import Deck from '../elements/Deck';
+import Separator from '../elements/Separator';
 
 const Hero = styled.div`
+  margin-top: 10vh;
   margin-bottom: 5vh;
 
   @media (max-width: 849px) {
-    margin-bottom: 0vh;
+    margin-bottom: 5vh;
   }
 `;
 
-const Deck = styled.div`
-  font-size: 24px;
-  text-align: center;
-  margin-top: -16px;
-`;
-
-const Post = styled.div`
-  border-bottom: 1px solid lightgray;
-  margin-bottom: 25px;
-
-  @media (max-width: 849px) {
-    padding-left: 0;
-  }
-`;
-
-
-const Snip = styled.div`
+const Snippet = styled.div`
   margin-bottom: 0px;
 
   @media (max-width: 849px) {
@@ -56,14 +39,13 @@ function Blog({ data }) {
           <Deck>bits of code</Deck>
         </Hero>
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <Link to={node.fields.slug}>
-            <Snip key={node.id}>
+          <Snippet key={node.id}>
+            <Link to={node.fields.slug}>
               <HeadingSecondary>{node.frontmatter.title}</HeadingSecondary>
-            </Snip>
-          </Link>
+            </Link>
+          </Snippet>
         ))}
-        <Post></Post>
-        <NavBar />
+        <Separator />
       </Layout>
     </>
   );
@@ -72,9 +54,9 @@ function Blog({ data }) {
 export const query = graphql`
   query {
     allMarkdownRemark(
-      filter:  { fileAbsolutePath: { regex: "/content/snippets/" } }
-      sort: { fields: [frontmatter___date], order: DESC }
-      ) {
+      filter: { fileAbsolutePath: { regex: "/content/snippets/" } }
+      sort: { fields: [frontmatter___title], order: ASC }
+    ) {
       edges {
         node {
           id

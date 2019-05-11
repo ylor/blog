@@ -33,8 +33,6 @@ export default createGlobalStyle`
     margin-left: auto;
     margin-right: auto;
 
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
   }
 
   h1,
@@ -89,15 +87,12 @@ export default createGlobalStyle`
   }
 
   body {
-    //padding-top: 5vh;
-    padding-top: 10vh;
-    line-height: 1;
     --sides-padding-desktop: 3%;
     --sides-padding-mobile: 5%;
 
     background-color: var(--background-color);
     font-family: 'SFMono-Regular', 'IBMPlexMono', sans-serif;
-    font-size: 19px;
+    font-size: 20px;
     font-weight: 400;
     color: var(--primary-color);
 
