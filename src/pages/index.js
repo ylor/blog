@@ -35,7 +35,6 @@ function Blog({ data }) {
     <>
       <SEO title="weblog" />
       <Layout>
-        <Header />
         <Hero>
           <HeadingPrimary>Roly Reyes</HeadingPrimary>
           <Deck>a weblog.</Deck>

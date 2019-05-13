@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 
-//import HeaderLogo from '../components/HeaderLogo';
+import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 import GlobalStyles from '../elements/GlobalStyles';
@@ -43,6 +43,7 @@ function Layout({ children }) {
         <>
           <GlobalStyles />
           <Wrapper>
+            <Header />
             <Content>{children}</Content>
             <Footer />
           </Wrapper>

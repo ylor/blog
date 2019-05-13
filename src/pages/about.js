@@ -7,7 +7,7 @@ import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import HeaderBack from '../components/HeaderBack';
 
-import Padding from '../elements/Padding'
+import Padding from '../elements/Padding';
 import HeadingPrimary from '../elements/HeadingPrimary';
 import TextBody from '../elements/TextBody';
 import Button from '../elements/Button';

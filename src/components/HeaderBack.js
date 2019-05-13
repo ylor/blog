@@ -19,8 +19,8 @@ const FixedBar = styled.div`
   color: var(--primary-color-lighter);
 
   background-color: var(--background-color-translucent);
-  -webkit-backdrop-filter: blur(2.5px);
-  backdrop-filter: blur(2.5px);
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
 
   @media (max-width: 849px) {
     padding: 0 var(--sides-padding-mobile);
@@ -29,22 +29,22 @@ const FixedBar = styled.div`
 
 function Header() {
   return (
-      <Location>
-        {({ location }) => {
-          if (location.pathname.indexOf("/snippet/") > -1) {
-            var backPath = "/snippets";
-          } else {
-            backPath = "/";
-          }
-          return (
-            <FixedBar>
+    <Location>
+      {({ location }) => {
+        if (location.pathname.indexOf('/snippet/') > -1) {
+          var backPath = '/snippets';
+        } else {
+          backPath = '/';
+        }
+        return (
+          <FixedBar>
             <Link to={backPath}>
               <p>&larr;</p>
             </Link>
-            </FixedBar>
-          );
-        }}
-      </Location>
+          </FixedBar>
+        );
+      }}
+    </Location>
   );
 }
 
