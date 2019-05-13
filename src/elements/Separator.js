@@ -6,7 +6,7 @@ export default styled.div`
   margin: 0 auto;
   margin-top: 5vh;
 
-  @media (max-width: 849px) {
+  @media (max-width: 900px) {
     padding-left: 0;
   }
 `;

@@ -3,43 +3,33 @@ import { Link } from 'gatsby';
 import { Location } from '@reach/router';
 import styled from 'styled-components';
 
-import NavBar from '../components/NavBar';
+import NavLinks from '../components/NavLinks';
 
-const HeaderContainer = styled.footer`
+const HeaderContainer = styled.header`
   position: relative;
   bottom: 0;
-  margin-top: 5vh;
+  margin-top: 3vh;
   margin-bottom: 3vh;
   text-align: center;
-
-  font-size: 17px;
-
-  @media (max-width: 849px) {
-    font-size: 16px;
-  }
 `;
 
-const FixedBar = styled.div`
+const BackBar = styled.div`
+  align-items: center;
+  color: var(--primary-color-light);
   display: flex;
   flex-direction: row;
-  align-items: center;
-  position: fixed;
-  left: auto;
-  right: auto;
-  z-index: 999;
-  height: 8vh;
-  width: 100%;
-  padding-top: 0 var(--sides-padding-desktop);
-  top: 0px;
   font-size: 64px;
-  color: var(--primary-color-lighter);
+  height: 8vh;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
 
   background-color: var(--background-color-translucent);
-  -webkit-backdrop-filter: blur(25px);
-  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(2.5px);
+  backdrop-filter: blur(2.5px);
 
-  @media (max-width: 849px) {
-    padding: 0 var(--sides-padding-mobile);
+  @media (max-width: 900px) {
+    padding: 0;
   }
 `;
 
@@ -53,25 +43,37 @@ function BackButton() {
           backPath = '/';
         }
         return (
-          <FixedBar>
+          <BackBar>
             <Link to={backPath}>
               <p>&larr;</p>
             </Link>
-          </FixedBar>
+          </BackBar>
         );
       }}
     </Location>
   );
 }
 
-function Header() {
+function WhichHeader() {
   return (
-    <HeaderContainer>
-      <NavBar>
-        <NavBar />
-      </NavBar>
-    </HeaderContainer>
+    <Location>
+      {({ location }) => {
+        if (location.pathname === '/') {
+          return (
+            <HeaderContainer>
+              <NavLinks />
+            </HeaderContainer>
+          );
+        } else {
+          return <BackButton />;
+        }
+      }}
+    </Location>
   );
+}
+
+function Header() {
+  return <WhichHeader />;
 }
 
 export default Header;

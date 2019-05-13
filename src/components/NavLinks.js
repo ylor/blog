@@ -2,13 +2,12 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 
-//import NavBar from '../elements/NavBar';
-
 const NavBar = styled.div`
   ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    font-size: 16px;
   }
 
   li {
@@ -20,12 +19,12 @@ const NavBar = styled.div`
     margin: 0 10px;
   }
 
-  @media (max-width: 849px) {
+  @media (max-width: 900px) {
     //padding: 0 var(--sides-padding-mobile);
   }
 `;
 
-function Header() {
+function Nav() {
   return (
     <NavBar>
       <ul>
@@ -52,4 +51,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Nav;

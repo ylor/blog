@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby';
 import styled from 'styled-components';
 
 import Layout from '../components/Layout';
-import Header from '../components/Header';
+//import Header from '../components/Header';
 import SEO from '../components/SEO';
 
 import HeadingPrimary from '../elements/HeadingPrimary';
@@ -16,7 +16,7 @@ import Separator from '../elements/Separator';
 const Hero = styled.div`
   margin-bottom: 5vh;
 
-  @media (max-width: 849px) {
+  @media (max-width: 900px) {
     margin-bottom: 5vh;
   }
 `;
@@ -25,7 +25,7 @@ const Post = styled.div`
   //border-bottom: 1px solid lightgray;
   margin-bottom: 25px;
 
-  @media (max-width: 849px) {
+  @media (max-width: 900px) {
     padding-left: 0;
   }
 `;

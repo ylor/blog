@@ -22,7 +22,7 @@ const FixedBar = styled.div`
   -webkit-backdrop-filter: blur(25px);
   backdrop-filter: blur(25px);
 
-  @media (max-width: 849px) {
+  @media (max-width: 900px) {
     padding: 0 var(--sides-padding-mobile);
   }
 `;

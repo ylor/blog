@@ -7,7 +7,7 @@ export default styled(TextBody)`
   color: var(--primary-color-lighter);
   text-align: center;
 
-  @media (max-width: 849px) {
+  @media (max-width: 900px) {
     font-size: 15px;
   }
 `;

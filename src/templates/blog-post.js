@@ -1,12 +1,9 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import styled from 'styled-components';
 
 import SEO from '../components/SEO';
 import Layout from '../components/Layout';
-import HeaderBack from '../components/HeaderBack';
 
-import Padding from '../elements/Padding';
 import HeadingPrimary from '../elements/HeadingPrimary';
 import TextBody from '../elements/TextBody';
 import TextDate from '../elements/TextDate';
@@ -18,9 +15,7 @@ export default ({ data }) => {
   return (
     <>
       <SEO title={post.frontmatter.title} />
-      <Padding />
       <Layout>
-        <HeaderBack />
         <HeadingPrimary>{post.frontmatter.title}</HeadingPrimary>
         <TextDate>{post.frontmatter.date}</TextDate>
         <TextBody dangerouslySetInnerHTML={{ __html: post.html }} />

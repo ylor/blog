@@ -5,7 +5,7 @@ import * as font from '../fonts/fonts.js';
 export default createGlobalStyle`
   :root {
     --background-color: hsl(0, 0%, 7%);
-    --background-color-translucent: hsla(0, 0%, 7%, 0.92);
+    --background-color-translucent: hsla(0, 0%, 7%, 0.9);
     --primary-color: hsl(0, 0%, 80%);
     --primary-color-light: hsla(0, 0%, 80%, 0.9);
     --primary-color-lighter: hsla(00, 0%, 80%, 0.7);
@@ -13,7 +13,7 @@ export default createGlobalStyle`
 
     @media (prefers-color-scheme: dark) {
       --background-color: hsl(0, 0%, 99%);
-      --background-color-translucent: hsla(0, 0%, 99%, 0.92);
+      --background-color-translucent: hsla(0, 0%, 99%, 0.9);
       --primary-color: hsl(0, 0%, 15%);
       --primary-color-light: hsla(0, 0%, 15%, 0.9);
       --primary-color-lighter: hsla(00, 0%, 15%, 0.7);
@@ -96,7 +96,7 @@ export default createGlobalStyle`
     font-weight: 400;
     color: var(--primary-color);
 
-    @media (max-width: 849px) {
+    @media (max-width: 900px) {
       font-size: 17px;
     }
   }

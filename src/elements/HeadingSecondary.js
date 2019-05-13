@@ -8,7 +8,7 @@ export default styled.h2`
   letter-spacing: -1.5px;
   text-align: center;
 
-  @media (max-width: 849px) {
+  @media (max-width: 900px) {
     font-size: 30px;
   }
 `;

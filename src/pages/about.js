@@ -3,11 +3,9 @@ import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
 
-import Layout from '../components/Layout';
 import SEO from '../components/SEO';
-import HeaderBack from '../components/HeaderBack';
+import Layout from '../components/Layout';
 
-import Padding from '../elements/Padding';
 import HeadingPrimary from '../elements/HeadingPrimary';
 import TextBody from '../elements/TextBody';
 import Button from '../elements/Button';
@@ -22,7 +20,7 @@ const ButtonWrapper = styled.div`
   width: 100%;
   margin-top: 10vh;
 
-  @media (max-width: 849px) {
+  @media (max-width: 900px) {
     flex-direction: column;
   }
 `;
@@ -31,9 +29,7 @@ function Info({ data }) {
   return (
     <>
       <SEO title="About" />
-      <Padding />
       <Layout>
-        <HeaderBack />
         <HeadingPrimary>About</HeadingPrimary>
         <ImgDiv>
           <Img fluid={data.RandomPhoto.childImageSharp.fluid} />
