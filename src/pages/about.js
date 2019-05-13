@@ -7,16 +7,13 @@ import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import HeaderBack from '../components/HeaderBack';
 
+import Padding from '../elements/Padding'
 import HeadingPrimary from '../elements/HeadingPrimary';
 import TextBody from '../elements/TextBody';
 import Button from '../elements/Button';
 
 const ImgDiv = styled.div`
-  margin: 0 5% 5vh 5%;
-
-  @media (max-width: 849px) {
-    margin: 0 0 5vh 0;
-  }
+  margin: 0 0 3vh 0;
 `;
 
 const ButtonWrapper = styled.div`
@@ -34,8 +31,9 @@ function Info({ data }) {
   return (
     <>
       <SEO title="About" />
-      <HeaderBack />
+      <Padding />
       <Layout>
+        <HeaderBack />
         <HeadingPrimary>About</HeadingPrimary>
         <ImgDiv>
           <Img fluid={data.RandomPhoto.childImageSharp.fluid} />

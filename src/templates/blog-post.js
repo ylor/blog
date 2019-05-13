@@ -5,16 +5,12 @@ import styled from 'styled-components';
 import SEO from '../components/SEO';
 import Layout from '../components/Layout';
 import HeaderBack from '../components/HeaderBack';
-import Footer from '../components/Footer';
 
+import Padding from '../elements/Padding'
 import HeadingPrimary from '../elements/HeadingPrimary';
 import TextBody from '../elements/TextBody';
 import TextDate from '../elements/TextDate';
 import Separator from '../elements/Separator';
-
-const Spacer = styled.div`
-  padding-top: 10vh;
-`;
 
 export default ({ data }) => {
   const post = data.markdownRemark;
@@ -22,8 +18,8 @@ export default ({ data }) => {
   return (
     <>
       <SEO title={post.frontmatter.title} />
+      <Padding />
       <Layout>
-        <Spacer />
         <HeaderBack />
         <HeadingPrimary>{post.frontmatter.title}</HeadingPrimary>
         <TextDate>{post.frontmatter.date}</TextDate>

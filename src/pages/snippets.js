@@ -6,13 +6,13 @@ import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import HeaderBack from '../components/HeaderBack';
 
+import Padding from '../elements/Padding'
 import HeadingPrimary from '../elements/HeadingPrimary';
 import HeadingSecondary from '../elements/HeadingSecondary';
 import Deck from '../elements/Deck';
 import Separator from '../elements/Separator';
 
 const Hero = styled.div`
-  margin-top: 10vh;
   margin-bottom: 5vh;
 
   @media (max-width: 849px) {
@@ -32,6 +32,7 @@ function Blog({ data }) {
   return (
     <>
       <SEO title="Snippets" />
+      <Padding />
       <Layout>
         <Hero>
           <HeaderBack />

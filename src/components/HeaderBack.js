@@ -29,22 +29,22 @@ const FixedBar = styled.div`
 
 function Header() {
   return (
-    <FixedBar>
       <Location>
         {({ location }) => {
-          if (location.pathname.indexOf('/snippet/') > -1) {
-            var backPath = '/snippets';
+          if (location.pathname.indexOf("/snippet/") > -1) {
+            var backPath = "/snippets";
           } else {
-            backPath = '/';
+            backPath = "/";
           }
           return (
+            <FixedBar>
             <Link to={backPath}>
               <p>&larr;</p>
             </Link>
+            </FixedBar>
           );
         }}
       </Location>
-    </FixedBar>
   );
 }
 
