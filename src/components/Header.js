@@ -19,6 +19,7 @@ const BackBar = styled.div`
   display: flex;
   flex-direction: row;
   font-size: 64px;
+  font-weight: 400;
   height: 8vh;
   position: fixed;
   width: 100%;
@@ -45,7 +46,7 @@ function BackButton() {
         return (
           <BackBar>
             <Link to={backPath}>
-              <p>&larr;</p>
+              &larr;
             </Link>
           </BackBar>
         );

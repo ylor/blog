@@ -2,6 +2,10 @@
 title: "css"
 ---
 
+# 339 bytes of responsive css
+
+A great starting place for simple projects
+
 source: https://blog.koley.in/2019/339-bytes-of-responsive-css
 hn discussion: https://news.ycombinator.com/item?id=19622786
 
@@ -25,3 +29,4 @@ h1, h2, strong {
   color: #111;
 }
 ```
+ s

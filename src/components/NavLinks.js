@@ -8,7 +8,6 @@ const NavBar = styled.div`
     margin: 0;
     padding: 8px 0;
     font-size: 16px;
-    font-weight: 700;
   }
 
   li {

@@ -2,7 +2,7 @@
 title: "powershell"
 ---
 
-## For Loop
+# For Loop
 ```powershell
 $files = Get-ChildItem -Path "C:\Path\To\Folder" *foo*.bar -Recurse
 foreach ($file in $files) {

@@ -10,14 +10,7 @@ export default styled.h1`
   text-align: center;
   text-transform: uppercase;
 
-  background: -webkit-linear-gradient(
-    240deg,
-    hsl(189, 100%, 50%),
-    hsl(174, 79%, 49%),
-    hsl(188, 81%, 59%),
-    hsl(213, 62%, 61%),
-    hsl(240, 100%, 70%)
-  );
+  background: var(--gradient-color);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 

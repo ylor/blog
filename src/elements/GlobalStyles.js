@@ -13,6 +13,15 @@ export default createGlobalStyle`
     --primary-color-light: hsla(0, 0%, 80%, 0.9);
     --primary-color-lighter: hsla(00, 0%, 80%, 0.7);
     --secondary-color-a: hsl(351, 100%, 63%);
+    --gradient-color: -webkit-linear-gradient(
+      240deg,
+      hsl(189, 100%, 50%),
+      hsl(174, 79%, 49%),
+      hsl(188, 81%, 59%),
+      hsl(213, 62%, 61%),
+      hsl(240, 100%, 70%)
+    );
+  
 
     @media (prefers-color-scheme: light) {
       --background-color: hsl(0, 0%, 96%);
@@ -64,6 +73,36 @@ export default createGlobalStyle`
     -webkit-tap-highlight-color: hsla(0, 0%, 0%, 0);
     -webkit-tap-highlight-color: transparent;
     color: inherit;
+  }
+
+  p a {
+    position: relative;
+    font-weight: 700;
+    z-index: 1;
+  }
+  
+  p a::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 1px;
+    left: 0px;
+    right: 0px;
+    background: var(--gradient-color);
+    transform-origin: bottom center;
+    transform: scaleY(0.1);
+    transition: all 0.25s ease-in-out;
+  }
+
+  p a:hover {
+    color: var(--background-color);
+    transition: all 0.1s ease-in-out;
+  }
+  
+  p a:hover::before {
+    transform: scaleY(1);
+    background: var(--gradient-color);
   }
 
   img {
