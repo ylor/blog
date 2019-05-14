@@ -8,8 +8,8 @@ import NavLinks from '../components/NavLinks';
 const HeaderContainer = styled.header`
   position: relative;
   bottom: 0;
-  margin-top: 3vh;
-  margin-bottom: 3vh;
+  margin-top: 1.5vh;
+  margin-bottom: 1.5vh;
   text-align: center;
 `;
 
@@ -37,7 +37,7 @@ function BackButton() {
   return (
     <Location>
       {({ location }) => {
-        if (location.pathname.indexOf('/snippet/') > -1) {
+        if (location.pathname.includes('/snippet/')) {
           var backPath = '/snippets';
         } else {
           backPath = '/';

@@ -3,6 +3,9 @@ import { createGlobalStyle } from 'styled-components';
 import * as font from '../fonts/fonts.js';
 
 export default createGlobalStyle`
+
+  @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
   :root {
     --background-color: hsl(0, 0%, 7%);
     --background-color-translucent: hsla(0, 0%, 7%, 0.9);

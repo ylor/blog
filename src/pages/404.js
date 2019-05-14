@@ -27,11 +27,11 @@ function NotFoundPage() {
       <SEO title="404: Not found" />
       <Layout>
         <Wrapper>
-          <HeadingPrimary>NOT FOUND</HeadingPrimary>
+          <HeadingPrimary>404</HeadingPrimary>
           <TextBody style={{ textAlign: 'center' }}>
-            This page doesn&#39;t exist{' '}
-            <span role="img" aria-label="duh">
-              😓
+            You took a wrong turn somewhere, partner.
+            <span role="img" aria-label="yeehaw">
+            🤠
             </span>
           </TextBody>
           <Link to="/">

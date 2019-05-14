@@ -5,18 +5,11 @@ import styled from 'styled-components';
 import SEO from '../components/SEO';
 import Layout from '../components/Layout';
 
+import Hero from '../elements/Hero';
 import HeadingPrimary from '../elements/HeadingPrimary';
 import HeadingSecondary from '../elements/HeadingSecondary';
 import Deck from '../elements/Deck';
 import Separator from '../elements/Separator';
-
-const Hero = styled.div`
-  margin-bottom: 5vh;
-
-  @media (max-width: 900px) {
-    margin-bottom: 5vh;
-  }
-`;
 
 const Snippet = styled.div`
   margin-bottom: 0px;

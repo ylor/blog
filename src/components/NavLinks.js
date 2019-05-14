@@ -6,8 +6,9 @@ const NavBar = styled.div`
   ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 8px 0;
     font-size: 16px;
+    font-weight: 700;
   }
 
   li {

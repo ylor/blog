@@ -6,6 +6,7 @@ import Layout from '../components/Layout';
 //import Header from '../components/Header';
 import SEO from '../components/SEO';
 
+import Hero from '../elements/Hero';
 import HeadingPrimary from '../elements/HeadingPrimary';
 import HeadingSecondary from '../elements/HeadingSecondary';
 import Deck from '../elements/Deck';
@@ -13,17 +14,9 @@ import TextBody from '../elements/TextBody';
 import TextDate from '../elements/TextDate';
 import Separator from '../elements/Separator';
 
-const Hero = styled.div`
-  margin-bottom: 5vh;
-
-  @media (max-width: 900px) {
-    margin-bottom: 5vh;
-  }
-`;
-
 const Post = styled.div`
   //border-bottom: 1px solid lightgray;
-  margin-bottom: 25px;
+  margin-bottom: 3vh;
 
   @media (max-width: 900px) {
     padding-left: 0;

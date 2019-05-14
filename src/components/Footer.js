@@ -5,16 +5,17 @@ import NavLinks from '../components/NavLinks';
 const FooterContainer = styled.footer`
   position: relative;
   bottom: 0;
-  margin-top: 5vh;
+  margin-top: 3vh;
   margin-bottom: 3vh;
   text-align: center;
+  font-size: 13px;
 `;
 
 function Footer() {
   return (
     <FooterContainer>
       <NavLinks />
-      <p>Copyright C</p>
+      <p>Copyright &copy; 2014-2019</p>
     </FooterContainer>
   );
 }

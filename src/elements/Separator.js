@@ -4,9 +4,4 @@ export default styled.div`
   border-bottom: 1px solid var(--primary-color);
   max-width: 500px;
   margin: 0 auto;
-  margin-top: 5vh;
-
-  @media (max-width: 900px) {
-    padding-left: 0;
-  }
 `;
