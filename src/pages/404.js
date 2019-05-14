@@ -31,7 +31,7 @@ function NotFoundPage() {
           <TextBody style={{ textAlign: 'center' }}>
             You took a wrong turn somewhere, partner.
             <span role="img" aria-label="yeehaw">
-            🤠
+              🤠
             </span>
           </TextBody>
           <Link to="/">
