@@ -30,4 +30,3 @@ h1, h2, strong {
   color: #111;
 }
 ```
- s

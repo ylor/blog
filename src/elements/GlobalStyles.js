@@ -23,14 +23,14 @@ export default createGlobalStyle`
   :root {
     --background-color: hsl(0, 0%, 7%);
     --background-color-translucent: hsla(0, 0%, 7%, 0.9);
-    --background-color-alternate: #222;
+    --background-color-alternate: hsl(0, 0%, 13%);
     --primary-color: hsl(0, 0%, 80%);
     --primary-color-light: hsla(0, 0%, 80%, 0.9);
     --primary-color-lighter: hsla(00, 0%, 80%, 0.7);
     --secondary-color-a: hsl(351, 100%, 63%);
     --font-stack: 'SFMono-Regular', 'IBMPlexMono', monospace;
     --mono-stack: 'SFMono-Regular', 'IBMPlexMono', monospace;
-    --gradient-color: linear-gradient(to right, #cb2d3e, #ef473a);
+    --gradient-color: linear-gradient(45deg, #cb2d3e, #ef473a);
   
 
     @media (prefers-color-scheme: light) {
@@ -105,18 +105,39 @@ export default createGlobalStyle`
     width: 100%;
   }
 
-  table,
-  th,
-  td {
-    background: var(--background-color-alternate);
-    color: var(--primary-color);
-    font-family: var(--mono-stack);
-    border-collapse: collapse;
-    border: 1px solid var(--primary-color-lighter);
+  blockquote {
+    border-left: 4px solid var(--primary-color-lighter);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     padding: 8px;
-    text-align: center;
-    margin: 0 auto;
-    font-size: 18px;
-    margin-bottom: 24px;
-    padding: 12px;
-  }`;
+  }
+
+  code,
+      pre {
+        background: #1E1E1E;
+      }
+
+      code {
+        vertical-align: text-bottom;
+        font-family: var(--mono-stack);
+        padding: 2px 8px;
+      }
+
+      pre {
+        border-left: 0px solid #fff;
+      }
+
+      table,
+      th,
+      td {
+        background: #1E1E1E;
+        border-collapse: collapse;
+        border: 1px solid var(--primary-color);
+        font-family: var(--mono-stack);
+        font-size: 18px;
+        margin-bottom: 24px;
+        margin: 0 auto;
+        padding: 12px;
+        text-align: center;
+      }
+      ;`
