@@ -6,8 +6,9 @@ title: "css"
 
 A great starting place for simple projects
 
-source: https://blog.koley.in/2019/339-bytes-of-responsive-css
-hn discussion: https://news.ycombinator.com/item?id=19622786
+Source: https://blog.koley.in/2019/339-bytes-of-responsive-css
+
+HN Discussion: https://news.ycombinator.com/item?id=19622786
 
 ```css
 body {

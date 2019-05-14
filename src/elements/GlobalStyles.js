@@ -23,18 +23,14 @@ export default createGlobalStyle`
   :root {
     --background-color: hsl(0, 0%, 7%);
     --background-color-translucent: hsla(0, 0%, 7%, 0.9);
+    --background-color-alternate: #222;
     --primary-color: hsl(0, 0%, 80%);
     --primary-color-light: hsla(0, 0%, 80%, 0.9);
     --primary-color-lighter: hsla(00, 0%, 80%, 0.7);
     --secondary-color-a: hsl(351, 100%, 63%);
-    --gradient-color: -webkit-linear-gradient(
-      240deg,
-      hsl(189, 100%, 50%),
-      hsl(174, 79%, 49%),
-      hsl(188, 81%, 59%),
-      hsl(213, 62%, 61%),
-      hsl(240, 100%, 70%)
-    );
+    --font-stack: 'SFMono-Regular', 'IBMPlexMono', monospace;
+    --mono-stack: 'SFMono-Regular', 'IBMPlexMono', monospace;
+    --gradient-color: linear-gradient(to right, #cb2d3e, #ef473a);
   
 
     @media (prefers-color-scheme: light) {
@@ -58,7 +54,7 @@ export default createGlobalStyle`
     --sides-padding-mobile: 5%;
 
     background-color: var(--background-color);
-    font-family: 'SFMono-Regular', 'IBMPlexMono', sans-serif;
+    font-family: var(--font-stack);
     font-size: 20px;
     font-weight: 400;
     color: var(--primary-color);
@@ -67,7 +63,6 @@ export default createGlobalStyle`
       font-size: 18px;
     }
 
-  }
 
   h1,
   h2,
@@ -87,39 +82,41 @@ export default createGlobalStyle`
   }
 
   p a {
-    position: relative;
-    font-weight: 700;
-    z-index: 1;
-  }
-  
-  p a::before {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    top: 1px;
-    bottom: 1px;
-    left: 0px;
-    right: 0px;
-    background: var(--gradient-color);
-    transform-origin: bottom center;
-    transform: scaleY(0.1);
-    transition: all .25s ease-in-out;
-  }
+    background-image: var(--gradient-color);
+    background-repeat: no-repeat;
+    background-size: 100% 2px;
+    background-position: 100% 100%;
+    transition: background-size 0.25s ease;
+    -webkit-tap-highlight-color: hsla(0, 0%, 0%, 0);
+    -webkit-tap-highlight-color: transparent;
 
+ }
   p a:hover {
     color: var(--background-color);
-    transition: all .25s ease-in-out;
-  }
+    background-size: 100% 100%;
+    transition: background-size 0.25s ease;
+    font-weight: 700;
+ }
   
-  p a:hover::before {
-    transform: scaleY(1);
-    background: var(--gradient-color);
-  }
-
   img {
     max-width: 100%;
     max-height: 100%;
     height: 100%;
     width: 100%;
   }
-`;
+
+  table,
+  th,
+  td {
+    background: var(--background-color-alternate);
+    color: var(--primary-color);
+    font-family: var(--mono-stack);
+    border-collapse: collapse;
+    border: 1px solid var(--primary-color-lighter);
+    padding: 8px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 18px;
+    margin-bottom: 24px;
+    padding: 12px;
+  }`;
