@@ -11,9 +11,9 @@ export default createGlobalStyle`
     --primary-color-lighter: hsla(00, 0%, 80%, 0.7);
     --secondary-color-a: hsl(351, 100%, 63%);
 
-    @media (prefers-color-scheme: dark) {
-      --background-color: hsl(0, 0%, 99%);
-      --background-color-translucent: hsla(0, 0%, 99%, 0.9);
+    @media (prefers-color-scheme: light) {
+      --background-color: hsl(0, 0%, 96%);
+      --background-color-translucent: hsla(0, 0%, 96%, 0.9);
       --primary-color: hsl(0, 0%, 15%);
       --primary-color-light: hsla(0, 0%, 15%, 0.9);
       --primary-color-lighter: hsla(00, 0%, 15%, 0.7);

@@ -1,1 +1,1 @@
-import 'gatsby-syntax-highlights-dracula';
+//import 'gatsby-syntax-highlights-dracula';
