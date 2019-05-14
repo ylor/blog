@@ -8,7 +8,7 @@ const FooterContainer = styled.footer`
   margin-top: 3vh;
   margin-bottom: 3vh;
   text-align: center;
-  font-size: 13px;
+  font-size: 14px;
 `;
 
 function Footer() {

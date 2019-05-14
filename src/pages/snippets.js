@@ -14,7 +14,7 @@ import Separator from '../elements/Separator';
 const Snippet = styled.div`
   margin-bottom: 0px;
 
-  @media (max-width: 900px) {
+  @media (max-width: 768px) {
     padding-left: 0;
   }
 `;

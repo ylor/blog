@@ -4,7 +4,21 @@ import * as font from '../fonts/fonts.js';
 
 export default createGlobalStyle`
 
-  @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+  @font-face {
+    font-family: "IBMPlexMono";
+    src: local('IBMPlexMono400'), url('${font.IBMPlexMono400}') format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+  }
+
+  @font-face {
+    font-family: "IBMPlexMono";
+    src: local('IBMPlexMono700'), url('${font.IBMPlexMono700}') format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: block;
+  }
 
   :root {
     --background-color: hsl(0, 0%, 7%);
@@ -14,7 +28,7 @@ export default createGlobalStyle`
     --primary-color-lighter: hsla(00, 0%, 80%, 0.7);
     --secondary-color-a: hsl(351, 100%, 63%);
     --gradient-color: -webkit-linear-gradient(
-      240deg,
+      -45deg,
       hsl(189, 100%, 50%),
       hsl(174, 79%, 49%),
       hsl(188, 81%, 59%),
@@ -39,11 +53,19 @@ export default createGlobalStyle`
   }
 
   body {
-    height: 100%;
-    width: 100%;
     margin: 0;
-    margin-left: auto;
-    margin-right: auto;
+    --sides-padding-desktop: 3%;
+    --sides-padding-mobile: 5%;
+
+    background-color: var(--background-color);
+    font-family: 'SFMono-Regular', 'IBMPlexMono', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--primary-color);
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
 
   }
 
@@ -55,17 +77,6 @@ export default createGlobalStyle`
   h6,
   p {
     margin: 0;
-    -webkit-margin-before: 0;
-    margin-block-start: 0;
-    -webkit-margin-after: 0;
-    margin-block-end: 0;
-    -webkit-margin-start: 0;
-    margin-inline-start: 0;
-    -webkit-margin-end: 0;
-    margin-inline-end: 0;
-
-    display: inline-block;
-    font-size: inherit;
   }
 
   a {
@@ -85,19 +96,19 @@ export default createGlobalStyle`
     content: '';
     position: absolute;
     z-index: -1;
-    top: 0;
+    top: 1px;
     bottom: 1px;
     left: 0px;
     right: 0px;
     background: var(--gradient-color);
     transform-origin: bottom center;
     transform: scaleY(0.1);
-    transition: all 0.25s ease-in-out;
+    transition: all .25s ease-in-out;
   }
 
   p a:hover {
     color: var(--background-color);
-    transition: all 0.1s ease-in-out;
+    transition: all .25s ease-in-out;
   }
   
   p a:hover::before {
@@ -110,36 +121,5 @@ export default createGlobalStyle`
     max-height: 100%;
     height: 100%;
     width: 100%;
-  }
-
-  @font-face {
-    font-family: "IBMPlexMono";
-    src: local('IBMPlexMono400'), url('${font.IBMPlexMono400}') format("woff2");
-    font-weight: 400;
-    font-style: normal;
-    font-display: block;
-  }
-
-  @font-face {
-    font-family: "IBMPlexMono";
-    src: local('IBMPlexMono700'), url('${font.IBMPlexMono700}') format("woff2");
-    font-weight: 700;
-    font-style: normal;
-    font-display: block;
-  }
-
-  body {
-    --sides-padding-desktop: 3%;
-    --sides-padding-mobile: 5%;
-
-    background-color: var(--background-color);
-    font-family: 'SFMono-Regular', 'IBMPlexMono', sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    color: var(--primary-color);
-
-    @media (max-width: 900px) {
-      font-size: 17px;
-    }
   }
 `;

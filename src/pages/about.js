@@ -20,7 +20,7 @@ const ButtonWrapper = styled.div`
   width: 100%;
   margin-top: 10vh;
 
-  @media (max-width: 900px) {
+  @media (max-width: 768px) {
     flex-direction: column;
   }
 `;

@@ -8,7 +8,7 @@ export default styled.p`
 
   color: var(--primary-color-light);
 
-  @media (max-width: 900px) {
+  @media (max-width: 768px) {
     margin: 0 0 3vh 0;
   }
 `;

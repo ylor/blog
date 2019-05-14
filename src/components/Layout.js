@@ -14,7 +14,7 @@ const Wrapper = styled.div`
   max-width: 1400px;
   padding: 0 var(--sides-padding-desktop);
 
-  @media (max-width: 900px) {
+  @media (max-width: 768px) {
     padding: 0 var(--sides-padding-mobile);
   }
 `;
@@ -25,11 +25,7 @@ const Padding = styled.body`
 
 const Content = styled.main`
   margin: 0 auto;
-  max-width: 900px;
-
-  // @media (max-width: 900px) {
-  // width: 100%;
-  // }
+  max-width: 768px;
 `;
 
 function Layout({ children }) {

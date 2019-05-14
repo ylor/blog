@@ -7,7 +7,6 @@ import NavLinks from '../components/NavLinks';
 
 const HeaderContainer = styled.header`
   position: relative;
-  bottom: 0;
   margin-top: 1.5vh;
   margin-bottom: 1.5vh;
   text-align: center;
@@ -29,7 +28,7 @@ const BackBar = styled.div`
   -webkit-backdrop-filter: blur(2.5px);
   backdrop-filter: blur(2.5px);
 
-  @media (max-width: 900px) {
+  @media (max-width: 768px) {
     padding: 0;
   }
 `;
@@ -45,9 +44,7 @@ function BackButton() {
         }
         return (
           <BackBar>
-            <Link to={backPath}>
-              &larr;
-            </Link>
+            <Link to={backPath}>&larr;</Link>
           </BackBar>
         );
       }}

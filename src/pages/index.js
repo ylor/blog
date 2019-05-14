@@ -3,7 +3,6 @@ import { Link, graphql } from 'gatsby';
 import styled from 'styled-components';
 
 import Layout from '../components/Layout';
-//import Header from '../components/Header';
 import SEO from '../components/SEO';
 
 import Hero from '../elements/Hero';
@@ -18,7 +17,7 @@ const Post = styled.div`
   //border-bottom: 1px solid lightgray;
   margin-bottom: 3vh;
 
-  @media (max-width: 900px) {
+  @media (max-width: 768px) {
     padding-left: 0;
   }
 `;

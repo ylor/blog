@@ -24,7 +24,7 @@ export default styled.div`
     box-shadow: 0px 9px 0 0 var(--primary-color);
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 768px) {
     width: 60vw;
     line-height: 2.7;
     font-size: 20px;

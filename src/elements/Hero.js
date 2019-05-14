@@ -1,5 +1,5 @@
 import styled from 'styled-components';
 
 export default styled.div`
-  margin-bottom: 3vh;
+  margin-bottom: 6vh;
 `;

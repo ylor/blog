@@ -8,6 +8,7 @@ const NavBar = styled.div`
     margin: 0;
     padding: 8px 0;
     font-size: 16px;
+    font-weight: 700;
   }
 
   li {
@@ -17,10 +18,6 @@ const NavBar = styled.div`
   li + li:before {
     content: '|';
     margin: 0 10px;
-  }
-
-  @media (max-width: 900px) {
-    //padding: 0 var(--sides-padding-mobile);
   }
 `;
 
