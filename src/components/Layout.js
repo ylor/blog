@@ -19,21 +19,20 @@ const Wrapper = styled.div`
   }
 `;
 
-const Padding = styled.body `
-padding-top: 8vh;
-`
+const Padding = styled.body`
+  padding-top: 8vh;
+`;
 
 const Content = styled.main`
   margin: 0 auto;
   max-width: 900px;
 
- // @media (max-width: 900px) {
-   // width: 100%;
- // }
+  // @media (max-width: 900px) {
+  // width: 100%;
+  // }
 `;
 
 function Layout({ children }) {
-  
   function BodyPadding() {
     return (
       <Location>
@@ -45,7 +44,7 @@ function Layout({ children }) {
       </Location>
     );
   }
-  
+
   return (
     <StaticQuery
       query={graphql`
