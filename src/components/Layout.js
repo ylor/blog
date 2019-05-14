@@ -19,7 +19,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const Padding = styled.body`
+const Padding = styled.div`
   padding-top: 8vh;
 `;
 
@@ -29,7 +29,7 @@ const Content = styled.main`
 `;
 
 function Layout({ children }) {
-  function BodyPadding() {
+  function HeaderPadding() {
     return (
       <Location>
         {({ location }) => {
@@ -57,7 +57,7 @@ function Layout({ children }) {
           <GlobalStyles />
           <Wrapper>
             <Header />
-            <BodyPadding />
+            <HeaderPadding />
             <Content>{children}</Content>
             <Footer />
           </Wrapper>

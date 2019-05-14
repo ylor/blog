@@ -28,7 +28,7 @@ export default createGlobalStyle`
     --primary-color-lighter: hsla(00, 0%, 80%, 0.7);
     --secondary-color-a: hsl(351, 100%, 63%);
     --gradient-color: -webkit-linear-gradient(
-      -45deg,
+      240deg,
       hsl(189, 100%, 50%),
       hsl(174, 79%, 49%),
       hsl(188, 81%, 59%),
