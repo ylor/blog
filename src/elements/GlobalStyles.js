@@ -30,7 +30,15 @@ export default createGlobalStyle`
     --secondary-color-a: hsl(351, 100%, 63%);
     --font-stack: 'SFMono-Regular', 'IBMPlexMono', monospace;
     --mono-stack: 'SFMono-Regular', 'IBMPlexMono', monospace;
-    --gradient-color: linear-gradient(45deg, #cb2d3e, #ef473a);
+    --gradient-color: linear-gradient(
+      45deg,
+      #2948ff,
+      #2f80ed,
+      #56ccf2,
+      #0ed2f7,
+      #1cefff
+    );
+  
   
 
     @media (prefers-color-scheme: light) {
