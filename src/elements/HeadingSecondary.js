@@ -7,6 +7,7 @@ export default styled.h2`
   margin-bottom: 2.5vh;
   letter-spacing: -1.5px;
   text-align: center;
+  text-transform: uppercase;
 
   @media (max-width: 768px) {
     font-size: 30px;
