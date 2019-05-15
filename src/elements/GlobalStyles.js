@@ -21,6 +21,8 @@ export default createGlobalStyle`
   }
 
   :root {
+    --font-stack: 'SFMono-Regular', 'IBMPlexMono', monospace;
+    --mono-stack: 'SFMono-Regular', 'IBMPlexMono', monospace;
     --background-color: hsl(0, 0%, 7%);
     --background-color-translucent: hsla(0, 0%, 7%, 0.9);
     --background-color-alternate: hsl(0, 0%, 13%);
@@ -28,8 +30,6 @@ export default createGlobalStyle`
     --primary-color-light: hsla(0, 0%, 80%, 0.9);
     --primary-color-lighter: hsla(00, 0%, 80%, 0.7);
     --secondary-color-a: hsl(351, 100%, 63%);
-    --font-stack: 'SFMono-Regular', 'IBMPlexMono', monospace;
-    --mono-stack: 'SFMono-Regular', 'IBMPlexMono', monospace;
     --gradient-color: linear-gradient(
       45deg,
       #2948ff,
@@ -121,31 +121,71 @@ export default createGlobalStyle`
   }
 
   code,
-      pre {
-        background: #1E1E1E;
-      }
+  pre {
+    background: #1E1E1E;
+  }
 
-      code {
-        vertical-align: text-bottom;
-        font-family: var(--mono-stack);
-        padding: 2px 8px;
-      }
+  code {
+    vertical-align: text-bottom;
+    font-family: var(--mono-stack);
+    padding: 2px 8px;
+  }
 
-      pre {
-        border-left: 0px solid #fff;
-      }
+  pre {
+    border-left: 0px solid #fff;
+  }
 
-      table,
-      th,
-      td {
-        background: #1E1E1E;
-        border-collapse: collapse;
-        border: 1px solid var(--primary-color);
-        font-family: var(--mono-stack);
-        font-size: 18px;
-        margin-bottom: 24px;
-        margin: 0 auto;
-        padding: 12px;
-        text-align: center;
-      }
-      ;`
+  table,
+  th,
+  td {
+    background: #1E1E1E;
+    border-collapse: collapse;
+    border: 1px solid var(--primary-color);
+    font-family: var(--mono-stack);
+    font-size: 18px;
+    margin-bottom: 24px;
+    margin: 0 auto;
+    padding: 12px;
+    text-align: center;
+  }
+
+  button {
+    z-index: 1;
+    position: relative;
+    font-size: inherit;
+    font-family: inherit;
+    color: white;
+    padding: 0.5em 1em;
+    outline: none;
+    border: none;
+    background-color: var(--background-color);
+    overflow: hidden;
+    transition: color 0.4s ease-in-out;
+    border-radius: 999px;
+    border: 3px solid var(--primary-color);
+  }
+  
+  button::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background: var(--gradient-color);
+    transform-origin: center;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.45s ease-in-out;
+  }
+  
+  button:hover {
+    cursor: pointer;
+    color: #161616;
+  }
+  
+  button:hover::before {
+    transform: translate(-50%, -50%) scale(15);
+  }
+  ;`

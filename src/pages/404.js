@@ -7,7 +7,6 @@ import SEO from '../components/SEO';
 
 import HeadingPrimary from '../elements/HeadingPrimary';
 import TextBody from '../elements/TextBody';
-import Button from '../elements/Button';
 
 const Wrapper = styled.div`
   display: flex;
@@ -15,10 +14,15 @@ const Wrapper = styled.div`
   flex-direction: column;
 `;
 
-const ButtonCentered = styled(Button)`
+const ButtonCentered = styled.button`
+  display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10vh;
+`;
+
+const Emoji = styled.div `
+  display: block;
+  font-size: 64px;
 `;
 
 function NotFoundPage() {
@@ -30,9 +34,9 @@ function NotFoundPage() {
           <HeadingPrimary>404</HeadingPrimary>
           <TextBody style={{ textAlign: 'center' }}>
             You took a wrong turn somewhere, partner.
-            <span role="img" aria-label="yeehaw">
+            <Emoji><span role="img" aria-label="yeehaw">
               🤠
-            </span>
+            </span></Emoji>
           </TextBody>
           <Link to="/">
             <ButtonCentered>Go home</ButtonCentered>

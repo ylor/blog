@@ -8,7 +8,6 @@ import Layout from '../components/Layout';
 
 import HeadingPrimary from '../elements/HeadingPrimary';
 import TextBody from '../elements/TextBody';
-import Button from '../elements/Button';
 
 const ImgDiv = styled.div`
   margin: 0 0 3vh 0;
@@ -17,12 +16,6 @@ const ImgDiv = styled.div`
 const ButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
-  width: 100%;
-  margin-top: 10vh;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
 `;
 
 function Info({ data }) {
@@ -51,7 +44,7 @@ function Info({ data }) {
         </TextBody>
         <ButtonWrapper>
           <a href="mailto:your&#64;email.com">
-            <Button>Get in touch</Button>
+            <button>Get in touch</button>
           </a>
         </ButtonWrapper>
       </Layout>
