@@ -22,7 +22,7 @@ const ButtonCentered = styled.button`
 
 const Emoji = styled.div `
   display: block;
-  font-size: 64px;
+  font-size: 3rem;
 `;
 
 function NotFoundPage() {

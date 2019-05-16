@@ -25,7 +25,7 @@ const Padding = styled.div`
 
 const Content = styled.main`
   margin: 0 auto;
-  max-width: 768px;
+  max-width: 1024px;
 `;
 
 function Layout({ children }) {

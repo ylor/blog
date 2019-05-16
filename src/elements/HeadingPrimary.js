@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export default styled.h1`
   display: block;
-  font-size: 64px;
+  font-size: 3rem;
   letter-spacing: -3px;
   margin: 0 auto 0 auto;
   max-width: 25em;
@@ -13,8 +13,4 @@ export default styled.h1`
   background: var(--gradient-color);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
-  @media (max-width: 768px) {
-    font-size: 50px;
-  }
 `;

@@ -8,7 +8,7 @@ import NavLinks from '../components/NavLinks';
 const HeaderContainer = styled.header`
   position: relative;
   margin-top: 1.5vh;
-  margin-bottom: 1.5vh;
+  margin-bottom: 3vh;
   text-align: center;
 `;
 
@@ -17,7 +17,7 @@ const BackBar = styled.div`
   color: var(--primary-color-light);
   display: flex;
   flex-direction: row;
-  font-size: 64px;
+  font-size: 3rem;
   font-weight: 400;
   height: 8vh;
   position: fixed;
@@ -28,9 +28,6 @@ const BackBar = styled.div`
   -webkit-backdrop-filter: blur(2.5px);
   backdrop-filter: blur(2.5px);
 
-  @media (max-width: 768px) {
-    padding: 0;
-  }
 `;
 
 function BackButton() {

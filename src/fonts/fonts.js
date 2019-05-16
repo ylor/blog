@@ -1,4 +1,5 @@
-import IBMPlexMono400 from './IBMPlexMono400.woff2';
-import IBMPlexMono700 from './IBMPlexMono700.woff2';
+import WriterDuo400 from './WriterDuo400.woff2';
+import WriterDuo700 from './WriterDuo700.woff2';
 
-export { IBMPlexMono400, IBMPlexMono700 };
+
+export { WriterDuo400, WriterDuo700 };

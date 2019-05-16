@@ -5,24 +5,24 @@ import * as font from '../fonts/fonts.js';
 export default createGlobalStyle`
 
   @font-face {
-    font-family: "IBMPlexMono";
-    src: local('IBMPlexMono400'), url('${font.IBMPlexMono400}') format("woff2");
+    font-family: "WriterDuo";
+    src: local('WriterDuo400'), url('${font.WriterDuo400}') format("woff2");
     font-weight: 400;
     font-style: normal;
     font-display: block;
   }
 
   @font-face {
-    font-family: "IBMPlexMono";
-    src: local('IBMPlexMono700'), url('${font.IBMPlexMono700}') format("woff2");
+    font-family: "WriterDuo";
+    src: local('WriterDuo700'), url('${font.WriterDuo700}') format("woff2");
     font-weight: 700;
     font-style: normal;
     font-display: block;
   }
 
   :root {
-    --font-stack: 'SFMono-Regular', 'IBMPlexMono', monospace;
-    --mono-stack: 'SFMono-Regular', 'IBMPlexMono', monospace;
+    --font-stack: 'WriterDuo', 'SFMono-Regular', Menlo, Consolas, monospace;
+    --mono-stack: 'SFMono-Regular', Menlo, Consolas, monospace;
     --background-color: hsl(0, 0%, 7%);
     --background-color-translucent: hsla(0, 0%, 7%, 0.9);
     --background-color-alternate: hsl(0, 0%, 13%);
@@ -56,6 +56,15 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
+  html {
+    font-size: 24px;
+    
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
+
+  }
+
   body {
     margin: 0;
     --sides-padding-desktop: 3%;
@@ -63,14 +72,9 @@ export default createGlobalStyle`
 
     background-color: var(--background-color);
     font-family: var(--font-stack);
-    font-size: 20px;
     font-weight: 400;
     color: var(--primary-color);
-
-    @media (max-width: 768px) {
-      font-size: 18px;
-    }
-
+  }
 
   h1,
   h2,
@@ -129,6 +133,7 @@ export default createGlobalStyle`
     vertical-align: text-bottom;
     font-family: var(--mono-stack);
     padding: 2px 8px;
+    font-size: .666rem;
   }
 
   pre {
@@ -142,10 +147,9 @@ export default createGlobalStyle`
     border-collapse: collapse;
     border: 1px solid var(--primary-color);
     font-family: var(--mono-stack);
-    font-size: 18px;
-    margin-bottom: 24px;
+    margin-bottom: 1rem;
     margin: 0 auto;
-    padding: 12px;
+    padding: .5rem;
     text-align: center;
   }
 
