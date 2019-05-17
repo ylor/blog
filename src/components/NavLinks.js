@@ -38,7 +38,7 @@ function Nav() {
           </a>
         </li>
         <li>
-          <Link to="/rss.xml">RSS</Link>
+          <a href="/rss.xml">RSS</a>
         </li>
         <li>
           <Link to="/snippets">Snippets</Link>
