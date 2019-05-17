@@ -1,5 +1,5 @@
-import WriterDuo400 from './WriterDuo400.woff2';
-import WriterDuo700 from './WriterDuo700.woff2';
+import Writer400 from './Writer400.woff2';
+import Writer700 from './Writer700.woff2';
 
 
-export { WriterDuo400, WriterDuo700 };
+export { Writer400, Writer700 };

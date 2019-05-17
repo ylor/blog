@@ -6,7 +6,7 @@ export default createGlobalStyle`
 
   @font-face {
     font-family: "WriterDuo";
-    src: local('WriterDuo400'), url('${font.WriterDuo400}') format("woff2");
+    src: local('Writer400'), url('${font.Writer400}') format("woff2");
     font-weight: 400;
     font-style: normal;
     font-display: block;
@@ -14,7 +14,7 @@ export default createGlobalStyle`
 
   @font-face {
     font-family: "WriterDuo";
-    src: local('WriterDuo700'), url('${font.WriterDuo700}') format("woff2");
+    src: local('Writer700'), url('${font.Writer700}') format("woff2");
     font-weight: 700;
     font-style: normal;
     font-display: block;
@@ -32,11 +32,11 @@ export default createGlobalStyle`
     --secondary-color-a: hsl(351, 100%, 63%);
     --gradient-color: linear-gradient(
       45deg,
+      #363795,
       #2948ff,
       #2f80ed,
       #56ccf2,
-      #0ed2f7,
-      #1cefff
+      #0ed2f7
     );
   
   
