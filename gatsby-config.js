@@ -75,7 +75,7 @@ module.exports = {
         background_color: `#111`,
         theme_color: `#111`,
         display: `minimal-ui`,
-        icon: `src/images/icon.png`,
+        icon: `src/static/icon.png`,
       },
     },
     {
@@ -96,7 +96,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/static`,
       },
     },
     {
