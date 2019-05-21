@@ -49,7 +49,7 @@ function BackButton() {
   );
 }
 
-function WhichHeader() {
+function Header() {
   return (
     <Location>
       {({ location }) => {
@@ -65,10 +65,6 @@ function WhichHeader() {
       }}
     </Location>
   );
-}
-
-function Header() {
-  return <WhichHeader />;
 }
 
 export default Header;
