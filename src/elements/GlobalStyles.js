@@ -7,7 +7,7 @@ export default createGlobalStyle`
     src: local('Writer400'), url('static/Writer400') format("woff2");
     font-weight: 400;
     font-style: normal;
-    font-display: auto;
+    font-display: swap;
   }
 
   @font-face {
@@ -15,7 +15,7 @@ export default createGlobalStyle`
     src: local('Writer700'), url('static/Writer700') format("woff2");
     font-weight: 700;
     font-style: normal;
-    font-display: auto;
+    font-display: swap;
   }
 
   :root {
