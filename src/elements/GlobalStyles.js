@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-import * as font from '../static/fonts';
+import * as font from './Fonts';
 
 export default createGlobalStyle`
 
@@ -21,8 +21,8 @@ export default createGlobalStyle`
   }
 
   :root {
-    --font-stack: 'WriterDuo', 'SFMono-Regular', Menlo, Consolas, monospace;
-    --mono-stack: 'SFMono-Regular', Menlo, Consolas, monospace;
+    --font-stack: 'WriterDuo', 'SFMono-Regular', 'Menlo', 'Consolas', monospace;
+    --mono-stack: 'SFMono-Regular', 'Menlo', 'Consolas', monospace;
     --background-color: rgb(17, 17, 17);
     --background-color-translucent: hsla(0, 0%, 7%, 0.9);
     --background-color-alternate: hsl(0, 0%, 13%);
