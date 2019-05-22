@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import NavLinks from '../components/NavLinks';
+import NavLinks from './NavLinks';
 
 const FooterContainer = styled.footer`
   position: relative;
@@ -15,7 +15,7 @@ function Footer() {
   return (
     <FooterContainer>
       <NavLinks />
-      <p>Copyright &copy; 2014-2019</p>
+      <span>Copyright &copy; 2014-2019</span>
     </FooterContainer>
   );
 }
