@@ -6,9 +6,9 @@ import styled from 'styled-components';
 import NavLinks from '../components/NavLinks';
 
 const HeaderContainer = styled.header`
-  position: relative;
-  margin-top: 1.5vh;
   margin-bottom: 3vh;
+  margin-top: 1.5vh;
+  position: relative;
   text-align: center;
 `;
 
@@ -27,7 +27,6 @@ const BackBar = styled.div`
   background-color: var(--background-color-translucent);
   -webkit-backdrop-filter: blur(2.5px);
   backdrop-filter: blur(2.5px);
-
 `;
 
 function BackButton() {

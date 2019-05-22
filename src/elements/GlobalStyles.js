@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-import * as font from '../fonts/fonts.js';
+import * as font from '../static/fonts';
 
 export default createGlobalStyle`
 
@@ -9,7 +9,7 @@ export default createGlobalStyle`
     src: local('Writer400'), url('${font.Writer400}') format("woff2");
     font-weight: 400;
     font-style: normal;
-    font-display: block;
+    font-display: swap;
   }
 
   @font-face {
@@ -17,13 +17,13 @@ export default createGlobalStyle`
     src: local('Writer700'), url('${font.Writer700}') format("woff2");
     font-weight: 700;
     font-style: normal;
-    font-display: block;
+    font-display: swap;
   }
 
   :root {
     --font-stack: 'WriterDuo', 'SFMono-Regular', Menlo, Consolas, monospace;
     --mono-stack: 'SFMono-Regular', Menlo, Consolas, monospace;
-    --background-color: hsl(0, 0%, 7%);
+    --background-color: rgb(17, 17, 17);
     --background-color-translucent: hsla(0, 0%, 7%, 0.9);
     --background-color-alternate: hsl(0, 0%, 13%);
     --primary-color: hsl(0, 0%, 80%);
@@ -39,16 +39,14 @@ export default createGlobalStyle`
       #0ed2f7
     );
   
-  
-
-    @media (prefers-color-scheme: light) {
-      --background-color: hsl(0, 0%, 96%);
-      --background-color-translucent: hsla(0, 0%, 96%, 0.9);
-      --primary-color: hsl(0, 0%, 15%);
-      --primary-color-light: hsla(0, 0%, 15%, 0.9);
-      --primary-color-lighter: hsla(00, 0%, 15%, 0.7);
-      --secondary-color-a: hsl(351, 100%, 63%);
-      }
+  //  @media (prefers-color-scheme: light) {
+  //    --background-color: hsl(0, 0%, 96%);
+  //    --background-color-translucent: hsla(0, 0%, 96%, 0.9);
+  //    --primary-color: hsl(0, 0%, 15%);
+  //    --primary-color-light: hsla(0, 0%, 15%, 0.9);
+  //    --primary-color-lighter: hsla(00, 0%, 15%, 0.7);
+  //    --secondary-color-a: hsl(351, 100%, 63%);
+  //    }
   }
 
   * {
@@ -76,20 +74,8 @@ export default createGlobalStyle`
     color: var(--primary-color);
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p {
-    margin: 0;
-  }
-
   a {
     text-decoration: none;
-    -webkit-tap-highlight-color: hsla(0, 0%, 0%, 0);
-    -webkit-tap-highlight-color: transparent;
     color: inherit;
   }
 
@@ -99,9 +85,6 @@ export default createGlobalStyle`
     background-size: 100% 2px;
     background-position: 100% 100%;
     transition: background-size 0.25s ease;
-    -webkit-tap-highlight-color: hsla(0, 0%, 0%, 0);
-    -webkit-tap-highlight-color: transparent;
-
  }
   p a:hover {
     color: var(--background-color);
@@ -192,4 +175,4 @@ export default createGlobalStyle`
   button:hover::before {
     transform: translate(-50%, -50%) scale(15);
   }
-  ;`
+  ;`;

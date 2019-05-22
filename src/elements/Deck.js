@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export default styled.p`
   display: block;
-  font-size: 24px;
+  font-size: 1rem;
   text-align: center;
-  margin-top: -24px;
+  margin-top: -1rem;
 `;

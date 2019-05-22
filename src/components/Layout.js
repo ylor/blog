@@ -28,19 +28,19 @@ const Content = styled.main`
   max-width: 1024px;
 `;
 
-function Layout({ children }) {
-  function HeaderPadding() {
-    return (
-      <Location>
-        {({ location }) => {
-          if (location.pathname !== '/') {
-            return <Padding />;
-          }
-        }}
-      </Location>
-    );
-  }
+function HeaderPadding() {
+  return (
+    <Location>
+      {({ location }) => {
+        if (location.pathname !== '/') {
+          return <Padding />;
+        }
+      }}
+    </Location>
+  );
+}
 
+function Layout({ children }) {
   return (
     <StaticQuery
       query={graphql`
