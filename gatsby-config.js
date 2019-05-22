@@ -75,7 +75,7 @@ module.exports = {
         background_color: `#111`,
         theme_color: `#111`,
         display: `minimal-ui`,
-        icon: `src/static/icon.png`,
+        icon: `static/icon.png`,
       },
     },
     `gatsby-plugin-netlify-cms`,
@@ -97,7 +97,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `static`,
-        path: `${__dirname}/src/static`,
+        path: `${__dirname}/static`,
       },
     },
     {
