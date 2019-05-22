@@ -6,9 +6,29 @@ module.exports = {
     siteUrl: `https://rolyreyes.com/`,
   },
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog`,
+        path: `${__dirname}/content/posts`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `snippet`,
+        path: `${__dirname}/content/snippets`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `static`,
+        path: `${__dirname}/static`,
+      },
+    },
     `gatsby-plugin-catch-links`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-offline`,
     `gatsby-plugin-robots-txt`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-styled-components`,
@@ -78,44 +98,9 @@ module.exports = {
         icon: `static/icon.png`,
       },
     },
-    `gatsby-plugin-netlify-cms`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `blog`,
-        path: `${__dirname}/content/posts`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `snippet`,
-        path: `${__dirname}/content/snippets`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `static`,
-        path: `${__dirname}/static`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `src`,
-        path: `${__dirname}/src/`,
-      },
-    },
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    {
-      resolve: `gatsby-plugin-sharp`,
-      options: {
-        useMozJpeg: true,
-        stripMetadata: true,
-        defaultQuality: 50,
-      },
-    },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -124,29 +109,10 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 1024,
-              quality: 75,
               withWebp: true,
             },
           },
-          {
-            resolve: `gatsby-remark-vscode`,
-            // All options are optional. Defaults shown here.
-            options: {
-              colorTheme: 'Dark+ (default dark)', // Read on for list of included themes. Also accepts object and function forms.
-              wrapperClassName: '', // Additional class put on 'pre' tag
-              injectStyles: true, // Injects (minimal) additional CSS for layout and scrolling
-              extensions: [], // Extensions to download from the marketplace to provide more languages and themes
-              languageAliases: {}, // Map of custom/unknown language codes to standard/known language codes
-              replaceColor: x => x, // Function allowing replacement of a theme color with another. Useful for replacing hex colors with CSS variables.
-              getLineClassName: ({
-                // Function allowing dynamic setting of additional class names on individual lines
-                content, //   - the string content of the line
-                index, //   - the zero-based index of the line within the code fence
-                language, //   - the language specified for the code fence
-                codeFenceOptions, //   - any options set on the code fence alongside the language (more on this later)
-              }) => '',
-            },
-          },
+          `gatsby-remark-vscode`,
         ],
       },
     },
