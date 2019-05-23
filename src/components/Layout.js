@@ -9,8 +9,13 @@ import Footer from './Footer';
 
 import GlobalStyles from '../elements/GlobalStyles';
 
+const Wrapper = styled.div`
+max-width: 900px;
+margin: 0 auto;
+;`
+
 const Padding = styled.div`
-  padding-top: 8vh;
+  padding-top: 3rem;
 `;
 
 const Content = styled.main`

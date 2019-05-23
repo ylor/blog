@@ -5,6 +5,8 @@ import styled from 'styled-components';
 
 import NavLinks from '../components/NavLinks';
 
+import Arrow from '../../static/back.svg'
+
 const HeaderContainer = styled.header`
   margin-bottom: 1.5vh;
   margin-top: 1.5vh;
@@ -17,7 +19,7 @@ const BackBar = styled.div`
   display: flex;
   flex-direction: row;
   font-size: 3rem;
-  height: 8vh;
+  height: 3rem;
   position: fixed;
   width: 100%;
   z-index: 999;
@@ -35,6 +37,16 @@ const BackBar = styled.div`
 
 `;
 
+const Icon = styled.div`
+  height: 34px;
+  width: 34px;
+  @media (max-width: 849px) {
+    height: 28px;
+    width: 28px;
+  }
+display: flex;
+fill: currenColor;`;
+
 function BackButton() {
   return (
     <Location>
@@ -46,7 +58,10 @@ function BackButton() {
         }
         return (
           <BackBar>
-            <Link to={backPath}>&larr;</Link>
+            <Link to={backPath}>            <Icon>
+          <img src={Arrow} alt="Back" />
+</Icon>
+</Link>
           </BackBar>
         );
       }}

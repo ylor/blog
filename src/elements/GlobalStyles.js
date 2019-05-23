@@ -101,6 +101,10 @@ export default createGlobalStyle`
     width: 100%;
   }
 
+  path {
+    fill: blue;
+}​
+
   blockquote {
     border-left: 4px solid var(--primary-color-lighter);
     padding: 2px 1rem;
