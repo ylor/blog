@@ -37,6 +37,7 @@ export default createGlobalStyle`
       #56ccf2,
       #0ed2f7
     );
+    --sides-padding: 1%;
   
   //  @media (prefers-color-scheme: light) {
   //    --background-color: hsl(0, 0%, 96%);
@@ -64,6 +65,7 @@ export default createGlobalStyle`
 
   body {
     margin: 0;
+    --sides-padding: 3%;
     --sides-padding-desktop: 3%;
     --sides-padding-mobile: 5%;
 

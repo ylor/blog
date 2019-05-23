@@ -25,8 +25,11 @@ const BackBar = styled.div`
   z-index: 999;
 
   background-color: var(--background-color-translucent);
-  -webkit-backdrop-filter: blur(2.5px);
   backdrop-filter: blur(2.5px);
+
+  a {
+    padding-left: 1rem;
+  }
 `;
 
 function BackButton() {

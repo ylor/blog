@@ -10,13 +10,6 @@ import Footer from './Footer';
 import GlobalStyles from '../elements/GlobalStyles';
 
 const Wrapper = styled.div`
-  margin: 0 auto;
-  max-width: 1400px;
-  padding: 0 var(--sides-padding-desktop);
-
-  @media (max-width: 768px) {
-    padding: 0 var(--sides-padding-mobile);
-  }
 `;
 
 const Padding = styled.div`
@@ -26,6 +19,7 @@ const Padding = styled.div`
 const Content = styled.main`
   margin: 0 auto;
   max-width: 900px;
+  padding: 0 var(--sides-padding)
 `;
 
 function HeaderPadding() {
@@ -55,12 +49,10 @@ function Layout({ children }) {
       render={data => (
         <>
           <GlobalStyles />
-          <Wrapper>
             <Header />
             <HeaderPadding />
             <Content>{children}</Content>
             <Footer />
-          </Wrapper>
         </>
       )}
     />
