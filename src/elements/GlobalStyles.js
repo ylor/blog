@@ -37,7 +37,7 @@ export default createGlobalStyle`
       #56ccf2,
       #0ed2f7
     );
-    --sides-padding: 1%;
+    --side-padding: 3%;
   
   //  @media (prefers-color-scheme: light) {
   //    --background-color: hsl(0, 0%, 96%);
@@ -103,9 +103,7 @@ export default createGlobalStyle`
 
   blockquote {
     border-left: 4px solid var(--primary-color-lighter);
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    padding: 8px;
+    padding: 2px 1rem;
   }
 
   code,

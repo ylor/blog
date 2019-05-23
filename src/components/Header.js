@@ -6,9 +6,8 @@ import styled from 'styled-components';
 import NavLinks from '../components/NavLinks';
 
 const HeaderContainer = styled.header`
-  margin-bottom: 3vh;
+  margin-bottom: 1.5vh;
   margin-top: 1.5vh;
-  position: relative;
   text-align: center;
 `;
 
@@ -18,7 +17,6 @@ const BackBar = styled.div`
   display: flex;
   flex-direction: row;
   font-size: 3rem;
-  font-weight: 400;
   height: 8vh;
   position: fixed;
   width: 100%;
@@ -29,7 +27,12 @@ const BackBar = styled.div`
 
   a {
     padding-left: 1rem;
+
+    @media (max-width: 768px) {
+      padding-left: 8px;
+    }
   }
+
 `;
 
 function BackButton() {

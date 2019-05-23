@@ -9,9 +9,6 @@ import Footer from './Footer';
 
 import GlobalStyles from '../elements/GlobalStyles';
 
-const Wrapper = styled.div`
-`;
-
 const Padding = styled.div`
   padding-top: 8vh;
 `;
@@ -19,7 +16,7 @@ const Padding = styled.div`
 const Content = styled.main`
   margin: 0 auto;
   max-width: 900px;
-  padding: 0 var(--sides-padding)
+  padding: 0 var(--side-padding)
 `;
 
 function HeaderPadding() {
