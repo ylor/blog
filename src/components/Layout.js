@@ -25,7 +25,7 @@ const Padding = styled.div`
 
 const Content = styled.main`
   margin: 0 auto;
-  max-width: 1024px;
+  max-width: 900px;
 `;
 
 function HeaderPadding() {

@@ -108,8 +108,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 1024,
-              withWebp: true,
+              maxWidth: 900,
             },
           },
           `gatsby-remark-vscode`,
