@@ -1,6 +1,22 @@
 import { createGlobalStyle } from 'styled-components';
+import * as font from '../elements/Fonts';
 
 export default createGlobalStyle`
+  @font-face {
+    font-family: "WriterDuo";
+    src: local('Writer400'), url('${font.Writer400}') format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: auto;
+  }
+
+  @font-face {
+    font-family: "WriterDuo";
+    src: local('Writer700'), url('${font.Writer700}') format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: auto;
+  }
 
   :root {
     --font-stack: 'WriterDuo', 'SFMono-Regular', 'Menlo', 'Consolas', 'DejaVu Sans Mono', monospace;
@@ -31,6 +47,7 @@ export default createGlobalStyle`
   }
 
   * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
 
