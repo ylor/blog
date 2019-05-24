@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import NavLinks from './NavLinks';
 
 const FooterContainer = styled.footer`
-  margin-bottom: 3vh;
+  margin: 3vh 0;
   text-align: center;
   font-size: 0.666rem;
 `;

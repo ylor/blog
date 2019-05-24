@@ -111,7 +111,17 @@ module.exports = {
               maxWidth: 900,
             },
           },
-          `gatsby-remark-vscode`,
+          {
+            resolve: `gatsby-remark-vscode`,
+            // All options are optional. Defaults shown here.
+            options: {
+              colorTheme: 'City Lights', // Read on for list of included themes. Also accepts object and function forms.
+              extensions: [{
+                identifier: 'Yummygum.city-lights-theme',
+                version: '1.1.0'
+              }],        
+            }
+          }
         ],
       },
     },

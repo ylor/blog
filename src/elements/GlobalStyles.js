@@ -24,11 +24,10 @@ export default createGlobalStyle`
     --mono-stack: 'SFMono-Regular', 'Menlo', 'Consolas', 'DejaVu Sans Mono', monospace;
     --background-color: hsla(0, 0%, 7%);
     --background-color-translucent: hsla(0, 0%, 7%, 0.9);
-    --background-color-alternate: hsl(0, 0%, 13%);
+    --background-color-alternate: #1D252C;
     --primary-color: hsl(0, 0%, 80%);
     --primary-color-light: hsla(0, 0%, 80%, 0.9);
     --primary-color-lighter: hsla(00, 0%, 80%, 0.7);
-    --secondary-color-a: hsl(351, 100%, 63%);
     --gradient-color: linear-gradient(
       45deg,
       hsl(239, 47%, 40%),
@@ -45,7 +44,6 @@ export default createGlobalStyle`
   //    --primary-color: hsl(0, 0%, 15%);
   //    --primary-color-light: hsla(0, 0%, 15%, 0.9);
   //    --primary-color-lighter: hsla(00, 0%, 15%, 0.7);
-  //    --secondary-color-a: hsl(351, 100%, 63%);
   //    }
   }
 
@@ -59,12 +57,10 @@ export default createGlobalStyle`
     @media (max-width: 768px) {
       font-size: 20px;
     }
-
   }
 
   body {
     margin: 0;
-
     background-color: var(--background-color);
     font-family: var(--font-stack);
     font-weight: 400;
@@ -104,22 +100,20 @@ export default createGlobalStyle`
     margin-left: 1rem;
   }
 
-  code,
   pre {
-    background: #1E1E1E;
+    font-size: .75rem;
   }
 
   code {
-    vertical-align: text-bottom;
+    background: var(--background-color-alternate);
     font-family: var(--mono-stack);
     padding: 2px 8px;
-    font-size: .666rem;
   }
 
   table,
   th,
   td {
-    background: #1E1E1E;
+    background: var(--background-color-alternate);
     border-collapse: collapse;
     border: 1px solid var(--primary-color);
     font-family: var(--mono-stack);

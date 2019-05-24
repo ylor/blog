@@ -1,24 +1,11 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import styled from 'styled-components';
 
-import Layout from '../components/Layout';
 import SEO from '../components/SEO';
+import Layout from '../components/Layout';
 
 import HeadingPrimary from '../elements/HeadingPrimary';
 import TextBody from '../elements/TextBody';
-
-const Wrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-`;
-
-const ButtonCentered = styled.button`
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-`;
 
 const Emoji = styled.div`
   display: block;
@@ -28,9 +15,8 @@ const Emoji = styled.div`
 function NotFoundPage() {
   return (
     <>
-      <SEO title="404: Not found" />
+      <SEO title="404" />
       <Layout>
-        <Wrapper>
           <HeadingPrimary>404</HeadingPrimary>
           <TextBody style={{ textAlign: 'center' }}>
             You took a wrong turn somewhere, partner.
@@ -40,10 +26,6 @@ function NotFoundPage() {
               </span>
             </Emoji>
           </TextBody>
-          <Link to="/">
-            <ButtonCentered>Go home</ButtonCentered>
-          </Link>
-        </Wrapper>
       </Layout>
     </>
   );

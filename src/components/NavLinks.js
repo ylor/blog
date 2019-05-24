@@ -17,7 +17,7 @@ const NavBar = styled.div`
 
   li + li:before {
     content: '|';
-    margin: 0 10px;
+    margin: 0 8px;
   }
 `;
 

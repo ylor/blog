@@ -6,8 +6,7 @@ import styled from 'styled-components';
 import NavLinks from '../components/NavLinks';
 
 const HeaderContainer = styled.header`
-  margin-bottom: 1.5vh;
-  margin-top: 1.5vh;
+  margin: 1.5vh 0 1.5vh 0;
   text-align: center;
 `;
 
@@ -18,7 +17,7 @@ const BackBar = styled.div`
   font-size: 3rem;
   height: 3rem;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   z-index: 999;
 
   background-color: var(--background-color-translucent);
@@ -60,7 +59,7 @@ function Header() {
           return (
             <HeaderContainer>
               <NavLinks />
-            </HeaderContainer>
+            </HeaderContainer>        
           );
         } else {
           return <BackButton />;
