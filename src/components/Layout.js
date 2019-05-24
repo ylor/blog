@@ -1,4 +1,5 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
@@ -45,6 +46,20 @@ function Layout({ children }) {
       `}
       render={data => (
         <>
+          <Helmet>
+          <link
+            rel="preload"
+            href="Writer400.woff2"
+            as="font"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="Writer700.woff2"
+            as="font"
+            crossOrigin="anonymous"
+          />
+          </Helmet>
           <GlobalStyles />
           <Header />
           <HeaderPadding />

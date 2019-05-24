@@ -17,15 +17,15 @@ function NotFoundPage() {
     <>
       <SEO title="404" />
       <Layout>
-          <HeadingPrimary>404</HeadingPrimary>
-          <TextBody style={{ textAlign: 'center' }}>
-            You took a wrong turn somewhere, partner.
-            <Emoji>
-              <span role="img" aria-label="yeehaw">
-                🤠
-              </span>
-            </Emoji>
-          </TextBody>
+        <HeadingPrimary>404</HeadingPrimary>
+        <TextBody style={{ textAlign: 'center' }}>
+          You took a wrong turn somewhere, partner.
+          <Emoji>
+            <span role="img" aria-label="yeehaw">
+              🤠
+            </span>
+          </Emoji>
+        </TextBody>
       </Layout>
     </>
   );

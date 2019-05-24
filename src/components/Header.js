@@ -59,7 +59,7 @@ function Header() {
           return (
             <HeaderContainer>
               <NavLinks />
-            </HeaderContainer>        
+            </HeaderContainer>
           );
         } else {
           return <BackButton />;
