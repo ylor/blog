@@ -31,11 +31,11 @@ export default createGlobalStyle`
     --secondary-color-a: hsl(351, 100%, 63%);
     --gradient-color: linear-gradient(
       45deg,
-      #363795,
-      #2948ff,
-      #2f80ed,
-      #56ccf2,
-      #0ed2f7
+      hsl(239, 47%, 40%),
+      hsl(231, 100%, 58%),
+      hsl(214, 84%, 56%),
+      hsl(195, 86%, 64%),
+      hsl(190, 94%, 51%)
     );
     --side-padding: 3%;
   
@@ -56,7 +56,6 @@ export default createGlobalStyle`
 
   html {
     font-size: 24px;
-    
     @media (max-width: 768px) {
       font-size: 20px;
     }
@@ -65,9 +64,6 @@ export default createGlobalStyle`
 
   body {
     margin: 0;
-    --sides-padding: 3%;
-    --sides-padding-desktop: 3%;
-    --sides-padding-mobile: 5%;
 
     background-color: var(--background-color);
     font-family: var(--font-stack);
@@ -78,6 +74,7 @@ export default createGlobalStyle`
   a {
     text-decoration: none;
     color: inherit;
+    outline: 0;
   }
 
   p a {
@@ -101,13 +98,10 @@ export default createGlobalStyle`
     width: 100%;
   }
 
-  path {
-    fill: blue;
-}​
-
   blockquote {
     border-left: 4px solid var(--primary-color-lighter);
-    padding: 2px 1rem;
+    padding-left: 1rem;
+    margin-left: 1rem;
   }
 
   code,
@@ -122,10 +116,6 @@ export default createGlobalStyle`
     font-size: .666rem;
   }
 
-  pre {
-    border-left: 0px solid #fff;
-  }
-
   table,
   th,
   td {
@@ -137,45 +127,5 @@ export default createGlobalStyle`
     margin: 0 auto;
     padding: .5rem;
     text-align: center;
-  }
-
-  button {
-    z-index: 1;
-    position: relative;
-    font-size: inherit;
-    font-family: inherit;
-    color: white;
-    padding: 0.5em 1em;
-    outline: none;
-    border: none;
-    background-color: var(--background-color);
-    overflow: hidden;
-    transition: color 0.4s ease-in-out;
-    border-radius: 999px;
-    border: 3px solid var(--primary-color);
-  }
-  
-  button::before {
-    content: '';
-    z-index: -1;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 1em;
-    height: 1em;
-    border-radius: 50%;
-    background: var(--gradient-color);
-    transform-origin: center;
-    transform: translate(-50%, -50%) scale(0);
-    transition: transform 0.45s ease-in-out;
-  }
-  
-  button:hover {
-    cursor: pointer;
-    color: #161616;
-  }
-  
-  button:hover::before {
-    transform: translate(-50%, -50%) scale(15);
   }
   ;`;

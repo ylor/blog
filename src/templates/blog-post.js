@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 import SEO from '../components/SEO';
 import Layout from '../components/Layout';
 
-import HeadingPrimary from '../elements/HeadingPrimary';
+import PostTitle from '../elements/PostTitle';
 import TextBody from '../elements/TextBody';
 import TextDate from '../elements/TextDate';
 import Separator from '../elements/Separator';
@@ -16,7 +16,7 @@ export default ({ data }) => {
     <>
       <SEO title={post.frontmatter.title} />
       <Layout>
-        <HeadingPrimary>{post.frontmatter.title}</HeadingPrimary>
+        <PostTitle>{post.frontmatter.title}</PostTitle>
         <TextDate>{post.frontmatter.date}</TextDate>
         <TextBody dangerouslySetInnerHTML={{ __html: post.html }} />
         <Separator />

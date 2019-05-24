@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export default styled.h1`
   display: block;
-  font-size: 3rem;
+  font-size: 2.5rem;
   letter-spacing: -3px;
   line-height: 1;
   margin: 0 auto 0 auto;

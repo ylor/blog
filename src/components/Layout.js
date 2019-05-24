@@ -1,18 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 import { Location } from '@reach/router';
-import styled from 'styled-components';
 
 import Header from './Header';
 import Footer from './Footer';
 
 import GlobalStyles from '../elements/GlobalStyles';
-
-const Wrapper = styled.div`
-max-width: 900px;
-margin: 0 auto;
-;`
 
 const Padding = styled.div`
   padding-top: 3rem;
@@ -21,7 +16,7 @@ const Padding = styled.div`
 const Content = styled.main`
   margin: 0 auto;
   max-width: 900px;
-  padding: 0 var(--side-padding)
+  padding: 0 var(--side-padding);
 `;
 
 function HeaderPadding() {
@@ -51,10 +46,10 @@ function Layout({ children }) {
       render={data => (
         <>
           <GlobalStyles />
-            <Header />
-            <HeaderPadding />
-            <Content>{children}</Content>
-            <Footer />
+          <Header />
+          <HeaderPadding />
+          <Content>{children}</Content>
+          <Footer />
         </>
       )}
     />

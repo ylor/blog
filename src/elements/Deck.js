@@ -4,5 +4,5 @@ export default styled.p`
   display: block;
   font-size: 1rem;
   text-align: center;
-  margin-top: -1rem;
+  margin-top: -.5rem;
 `;
