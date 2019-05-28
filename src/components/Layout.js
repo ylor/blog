@@ -49,13 +49,13 @@ function Layout({ children }) {
           <Helmet>
           <link
             rel="preload"
-            href="static/Writer400-8e9ac3fbe916534e81b78fbc67174ffe.woff2"
+            href="static/Writer400-b18bea3a339adb7910a7b24ee5e97488.woff2"
             as="font"
             crossOrigin="anonymous"
           />
           <link
             rel="preload"
-            href="static/Writer700-0b15c086445b2f48320afb81b37c6107.woff2"
+            href="static/Writer700-1004d983e961e4b8a45f723b33305d6e.woff2"
             as="font"
             crossOrigin="anonymous"
           />
