@@ -51,13 +51,15 @@ function Layout({ children }) {
             rel="preload"
             href="static/Writer400-b18bea3a339adb7910a7b24ee5e97488.woff2"
             as="font"
-            crossOrigin="anonymous"
+            type="font/woff2"
+            crossorigin
           />
           <link
             rel="preload"
             href="static/Writer700-1004d983e961e4b8a45f723b33305d6e.woff2"
             as="font"
-            crossOrigin="anonymous"
+            type="font/woff2"
+            crossorigin
           />
           </Helmet>
           <GlobalStyles />
