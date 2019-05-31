@@ -8,10 +8,7 @@ import Layout from '../components/Layout';
 
 import HeadingPrimary from '../elements/HeadingPrimary';
 import TextBody from '../elements/TextBody';
-
-const ImgDiv = styled.div`
-  margin: 0 0 3vh 0;
-`;
+import Button from '../elements/Button';
 
 const ButtonWrapper = styled.div`
   display: flex;
@@ -24,9 +21,8 @@ function Info({ data }) {
       <SEO title="About" />
       <Layout>
         <HeadingPrimary>About</HeadingPrimary>
-        <ImgDiv>
-          <Img fluid={data.RandomPhoto.childImageSharp.fluid} />
-        </ImgDiv>
+        <br/>
+        <Img fluid={data.RandomPhoto.childImageSharp.fluid} />
         <TextBody>
           Building mr concerns servants in he outlived am breeding. He so lain
           good miss when sell some at if. Told hand so an rich gave next. How
@@ -44,7 +40,7 @@ function Info({ data }) {
         </TextBody>
         <ButtonWrapper>
           <a href="mailto:your&#64;email.com">
-            <button>Get in touch</button>
+            <Button>Get in touch</Button>
           </a>
         </ButtonWrapper>
       </Layout>
