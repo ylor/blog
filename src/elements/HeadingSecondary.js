@@ -4,7 +4,7 @@ export default styled.h2`
   display: block;
   font-size: 1.5rem;
   letter-spacing: -1.5px;
-  line-height: 1.25;
-  margin-bottom: 2.5vh;
+  line-height: 1;
+  //margin-bottom: 3vh;
   text-align: center;
 }`;

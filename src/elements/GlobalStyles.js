@@ -21,8 +21,8 @@ export default createGlobalStyle`
   :root {
     --font-stack: 'WriterDuo', 'SFMono-Regular', 'Menlo', 'Consolas', 'DejaVu Sans Mono', monospace;
     --mono-stack: 'SFMono-Regular', 'Menlo', 'Consolas', 'DejaVu Sans Mono', monospace;
-    --background-color: hsla(0, 0%, 7%);
-    --background-color-translucent: hsla(0, 0%, 7%, 0.9);
+    --background-color: hsla(0, 0%, 5%);
+    --background-color-translucent: hsla(0, 0%, 5%, 0.9);
     --background-color-alternate: #1D252C;
     --primary-color: hsl(0, 0%, 80%);
     --primary-color-light: hsla(0, 0%, 80%, 0.9);

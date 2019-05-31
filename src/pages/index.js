@@ -5,21 +5,16 @@ import styled from 'styled-components';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 
-import Hero from '../elements/Hero';
 import HeadingPrimary from '../elements/HeadingPrimary';
 import HeadingSecondary from '../elements/HeadingSecondary';
 import Deck from '../elements/Deck';
 import TextBody from '../elements/TextBody';
 import TextDate from '../elements/TextDate';
-import Separator from '../elements/Separator';
 
 const Post = styled.div`
-  //border-bottom: 1px solid lightgray;
-  margin-bottom: 3vh;
-
-  @media (max-width: 768px) {
-    padding-left: 0;
-  }
+  border-bottom: 1px solid lightgray;
+  padding-top: 1vh;
+  padding-bottom: 3vh;
 `;
 
 function Blog({ data }) {
@@ -27,10 +22,8 @@ function Blog({ data }) {
     <>
       <SEO title="weblog" />
       <Layout>
-        <Hero>
-          <HeadingPrimary>Roly Reyes</HeadingPrimary>
-          <Deck>a weblog.</Deck>
-        </Hero>
+        <HeadingPrimary>Roly Reyes</HeadingPrimary>
+        <Deck>a weblog.</Deck>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <Post key={node.id}>
             <Link to={node.fields.slug}>
@@ -40,7 +33,6 @@ function Blog({ data }) {
             <TextDate>
               {node.frontmatter.date} - {node.timeToRead} min. read
             </TextDate>
-            <Separator />
           </Post>
         ))}
       </Layout>

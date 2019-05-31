@@ -5,18 +5,15 @@ import styled from 'styled-components';
 import SEO from '../components/SEO';
 import Layout from '../components/Layout';
 
-import Hero from '../elements/Hero';
 import HeadingPrimary from '../elements/HeadingPrimary';
 import HeadingSecondary from '../elements/HeadingSecondary';
 import Deck from '../elements/Deck';
 import Separator from '../elements/Separator';
 
-const Snippet = styled.div`
-  margin-bottom: 0px;
+const Snippet = styled.div``;
 
-  @media (max-width: 768px) {
-    padding-left: 0;
-  }
+const SnippetTitle = styled(HeadingSecondary)`
+  margin: 0.666rem;
 `;
 
 function Blog({ data }) {
@@ -24,14 +21,13 @@ function Blog({ data }) {
     <>
       <SEO title="Snippets" />
       <Layout>
-        <Hero>
-          <HeadingPrimary>Snippets</HeadingPrimary>
-          <Deck>bits of code</Deck>
-        </Hero>
+        <HeadingPrimary>Snippets</HeadingPrimary>
+        <Deck>bits of code</Deck>
+
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <Snippet key={node.id}>
             <Link to={node.fields.slug}>
-              <HeadingSecondary>{node.frontmatter.title}</HeadingSecondary>
+              <SnippetTitle>{node.frontmatter.title}</SnippetTitle>
             </Link>
           </Snippet>
         ))}

@@ -1,13 +1,18 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import styled from 'styled-components';
 
 import SEO from '../components/SEO';
 import Layout from '../components/Layout';
 
-import PostTitle from '../elements/PostTitle';
+import HeadingPrimary from '../elements/HeadingPrimary';
 import TextBody from '../elements/TextBody';
 import TextDate from '../elements/TextDate';
 import Separator from '../elements/Separator';
+
+const PostTitle = styled(HeadingPrimary)`
+  font-size: 2.5rem;
+`;
 
 export default ({ data }) => {
   const post = data.markdownRemark;

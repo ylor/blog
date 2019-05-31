@@ -6,7 +6,6 @@ export default styled.h1`
   letter-spacing: -3px;
   line-height: 1;
   margin: 0 auto 0 auto;
-  max-width: 25rem;
   text-align: center;
   text-transform: uppercase;
 
