@@ -5,4 +5,5 @@ export default styled.p`
   font-size: 1.25rem;
   text-align: center;
   margin-top: -0.5rem;
+  font-style: italic;
 `;

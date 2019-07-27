@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import 'typeface-ibm-plex-mono'
 import * as font from '../elements/Fonts';
 
 export default createGlobalStyle`
@@ -19,8 +20,8 @@ export default createGlobalStyle`
   }
 
   :root {
-    --font-stack: 'WriterDuo', 'SFMono-Regular', 'Menlo', 'Consolas', 'DejaVu Sans Mono', monospace;
-    --mono-stack: 'SFMono-Regular', 'Menlo', 'Consolas', 'DejaVu Sans Mono', monospace;
+    --font-stack: 'IBM Plex Mono', 'SFMono-Regular', 'Menlo', 'Consolas', 'DejaVu Sans Mono', monospace;
+    --mono-stack: 'IBM Plex Mono', 'SFMono-Regular', 'Menlo', 'Consolas', 'DejaVu Sans Mono', monospace;
     --background-color: hsla(0, 0%, 5%);
     --background-color-translucent: hsla(0, 0%, 5%, 0.9);
     --background-color-alternate: #1D252C;

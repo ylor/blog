@@ -36,11 +36,11 @@ function BackButton() {
   return (
     <Location>
       {({ location }) => {
-        if (location.pathname.includes('/snippet/')) {
-          var backPath = '/snippets';
-        } else {
-          backPath = '/';
-        }
+        let backPath;
+        location.pathname.includes('/snippet/')
+          ? (backPath = '/snippets')
+          : (backPath = '/');
+
         return (
           <BackBar>
             <Link to={backPath}>&larr;</Link>
